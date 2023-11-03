@@ -72,10 +72,12 @@ class _MyAppState extends State<MyApp> {
           itemCount: weatherList.length,
           itemBuilder: (context, index) {
             final weather = weatherList[index];
-            return ListTile(
-              title: Text(weather.city),
-              subtitle: Text(
-                'Temperature: ${weather.temperature}°C\nCondition: ${weather.condition}\nHumidity: ${weather.humidity}%\nWind Speed: ${weather.windSpeed} km/h',
+            return Card(
+              child: ListTile(
+                title: Text(weather.city),
+                subtitle: Text(
+                  'Temperature: ${weather.temperature}°C\nCondition: ${weather.condition}\nHumidity: ${weather.humidity}%\nWind Speed: ${weather.windSpeed} km/h',
+                ),
               ),
             );
           },
